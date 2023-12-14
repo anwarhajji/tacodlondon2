@@ -43,7 +43,8 @@ export default defineConfig({
       SVG: true,
     }),
   ],
-  output: 'server',
+  output: "static",
+
   adapter: netlify({
     edgeMiddleware: true
   }),
