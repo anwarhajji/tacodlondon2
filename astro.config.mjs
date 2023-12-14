@@ -25,7 +25,7 @@ const m2dxOptions = {
 export default defineConfig({
  
   
-  site: "https://tacoslondon.netlify.com",
+  site: "https://tacoslondon.netlify.app",
   integrations: [
     mdx({}),
     sitemap(),
@@ -45,9 +45,7 @@ export default defineConfig({
   ],
   output: "static",
 
-  adapter: netlify({
-    edgeMiddleware: true
-  }),
+  adapter: netlify(),
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [
