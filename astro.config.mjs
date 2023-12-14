@@ -21,7 +21,7 @@ const m2dxOptions = {
   autoImports: true,
 };
 
-// https://astro.build/config
+/// https://astro.build/config
 export default defineConfig({
  
   
