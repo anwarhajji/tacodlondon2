@@ -63,18 +63,41 @@ let navigation = await getEntry("config", "navigation");
               </div>
             ))
         }
+        
+
+        
+
         <div class="min-w-[12rem] space-y-3 sm:max-w-[14rem]">
-          <div class="font-semibold uppercase">{t("MAP")}</div>
+          <div class="font-semibold uppercase">{t("social")}</div>
           <div class="flex flex-col">
-            <a href="https://www.google.com/maps/dir//Vauxhall+Food+%26+Beer+Garden,+6a+S+Lambeth+Pl,+London+SW8+1SP,+Royaume-Uni/@51.4855983,-0.205979,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x487605bec625538b:0xd90466c7efc67037!2m2!1d-0.1235788!2d51.4856272?entry=ttu">FIND US </a>
+            {
+              contact.data.social && (
+                <ul class="-ml-1 flex  flex-wrap justify-center gap-2 sm:justify-start ">
+                  {contact.data.social.map((link) => (
+                    <li>
+                      <a
+                        href={link.href}
+                        class="grid h-full place-items-center transition-transform duration-500 hover:scale-110 "
+                        target="_blank"
+                        aria-label={link.label}
+                      >
+                        <Icon name={link.icon} class="h-8 w-8" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
           </div>
         </div>
 
-        
+
+
+
       </div>
     </div>
   </div>
-
+ 
   
   <div class="relative w-full overflow-hidden">
     <div class="attribution container-xl grid place-items-start">
